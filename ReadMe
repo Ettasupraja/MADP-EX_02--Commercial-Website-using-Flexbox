@@ -1,5 +1,5 @@
-## Ex02 Commercial Website
-## Date:12-08-2025
+# Ex02 Commercial Website
+## Date: 11-08-2025
 
 ## AIM
 To create a commercial website using CSS Flexbox.
@@ -50,85 +50,89 @@ Deploy the website.
 ### STEP 15
 Upload to GitHub Pages for free hosting.
 
-## PROGRAM:
-index.html
+## PROGRAM
+
+indexx.html
+
 ```
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Business</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Z_Hennas | Beautiful Henna Art</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header>
-    <div class="logo">MyBusiness</div>
+    <h1>Z_Hennas</h1>
     <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#account">Account</a></li>
-      </ul>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="home" class="hero">
-    <h1>Welcome to MyBusiness</h1>
-    <p>Your one-stop shop for quality products.</p>
+  <section class="hero">
+    Beautiful Henna Designs for Every Occasion
   </section>
 
-  <section id="products" class="products">
-    <h2>Our Products</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="pexels-harper-sunday-2866796.jpg" alt="Product 1" />
-        <p>Product 1</p>
+  <div class="container">
+    <section id="services" class="services">
+      <div class="service-card">
+        <img src="C:\Users\admin\Desktop\bridall.jpg" alt="Bridal Henna" />
+        <h3>Bridal Henna</h3>
+        <p>Elegant, intricate bridal mehndi designs to make your special day unforgettable.</p>
       </div>
-      <div class="product-card">
-        <img src="pexels-madebymath-90946.jpg" alt="Product 2" />
-        <p>Product 2</p>
+      <div class="service-card">
+        <img src="C:\Users\admin\Desktop\party.jpg" alt="Party Henna" />
+        <h3>Party Designs</h3>
+        <p>Fun and trendy henna patterns perfect for parties and social gatherings.</p>
       </div>
-      <div class="product-card">
-        <img src="pexels-polina-tankilevitch-3735149.jpg" alt="Product 3" />
-        <p>Product 3</p>
+      <div class="service-card">
+        <img src="C:\Users\admin\Desktop\customizeart.jpg" alt="Custom Henna Art" />
+        <h3>Custom Art</h3>
+        <p>Personalized henna designs tailored to your unique style and preferences.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>We are committed to quality and customer satisfaction.</p>
-  </section>
+    <section id="about" class="about">
+      <h2>About Z_Hennas</h2>
+      <p>At Z_Hennas, we specialize in creating beautiful and lasting henna designs for all occasions. We use safe henna to bring your vision to life, whether it’s for weddings, festivals, or just for fun.</p>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: contact@mybusiness.com</p>
-    <p>Phone: +123 456 7890</p>
-  </section>
+    <section id="contact" class="contact-form">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
 
-  <section id="account" class="account">
-    <h2>User Account</h2>
-    <p>Sign in or register to manage your orders.</p>
-  </section>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
 
   <footer>
-    <div class="social-links">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-    </div>
-    <p>&copy; 2025 MyBusiness. All rights reserved.</p>
+    <p>Follow us on Instagram <a href="https://www.instagram.com/z_hennas_" target="_blank" rel="noopener noreferrer">@z_hennas_</a></p>
   </footer>
 
 </body>
 </html>
+
+
 ```
-style.css
+
+
+styles.css
 ```
+/* Reset some basic styles */
 * {
   margin: 0;
   padding: 0;
@@ -136,106 +140,196 @@ style.css
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff8f0;
+  color: #4b3b2b;
   line-height: 1.6;
-  background: #f5f5f5;
-  color: #333;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
 header {
+  background: #7e4a35;
+  color: white;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #003366;
+}
+
+header h1 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+nav a {
   color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+nav a:hover {
+  text-decoration: underline;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.nav-links li a {
-  color: white;
-  transition: color 0.3s ease;
-}
-.nav-links li a:hover {
-  color: #ffcc00;
-}
-.hero,
-.about,
-.contact,
-.account {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: white;
-}
-
-.products {
-  padding: 60px 20px;
-  background-color: #e8f4fa;
-}
-
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.product-card {
-  background: white;
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 200px;
-  transition: transform 0.3s ease;
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.product-card:hover {
-  transform: scale(1.05);
-}
-footer {
-  background: #003366;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-.social-links {
+.hero {
+  background: #f8e7d1;
+  height: 350px;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 10px;
-}
-
-.social-links a {
+  align-items: center;
   color: #fff;
-  transition: color 0.3s;
+  text-shadow: 2px 2px 4px #000;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 20px;
 }
 
-.social-links a:hover {
-  color: #ffcc00;
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #f8e7d1;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1 1 300px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  color: #7e4a35;
+}
+
+.about {
+  background: #f1d7b0;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #7e4a35;
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form button {
+  background: #7e4a35;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.contact-form button:hover {
+  background: #5d3a27;
+}
+
+footer {
+  background: #7e4a35;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #f9d5b4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+
 ```
 
-## OUTPUT:
-<img width="1920" height="1080" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/7e1374bc-3699-4ade-9c42-e2cb52dedabc" />
+
+## OUTPUT
+
+<img width="1891" height="1045" alt="Screenshot 2025-08-11 182428" src="https://github.com/user-attachments/assets/853e6db0-4578-41bc-b714-56b3ca7f39b2" />
+
+
+<img width="1885" height="1037" alt="Screenshot 2025-08-11 182445" src="https://github.com/user-attachments/assets/0c171193-f108-49db-a800-6abb1139f94c" />
+
+
+<img width="1889" height="1046" alt="Screenshot 2025-08-11 182459" src="https://github.com/user-attachments/assets/6d7cd3ef-69b4-49aa-8ca1-03f105a6a071" />
+
+
 
 ## RESULT
 The program for creating commercial website using CSS Flexbox is executed successfully.
